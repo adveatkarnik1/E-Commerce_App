@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "274877030914",
+    "project_id": "my-grid-app-a9d91",
+    "storage_bucket": "my-grid-app-a9d91.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:274877030914:android:dbc325910b5fcf0d21bd1b",
+        "android_client_info": {
+          "package_name": "com.example.ecommerce_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "274877030914-ofc3nc56jb9f53hrqds9ufvfeo93vb03.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLORquKJXnTyDjrav9ntEDO1-e_I6TzHs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "274877030914-ofc3nc56jb9f53hrqds9ufvfeo93vb03.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
