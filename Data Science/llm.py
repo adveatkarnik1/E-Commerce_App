@@ -6,8 +6,8 @@ from langchain.chains import LLMChain
 from langchain.chat_models import ChatOpenAI
 import pandas as pd 
 
-#from system import openaiapikey
-os.environ['OPENAI_API_KEY']='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'#openaiapikey
+from system import openaiapikey
+os.environ['OPENAI_API_KEY']=openaiapikey
 
 chat = ChatOpenAI(model='gpt-3.5-turbo',temperature=0)
 
