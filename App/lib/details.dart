@@ -8,6 +8,7 @@ import 'package:http/http.dart';
 import 'package:provider/provider.dart';
 import 'constants/routes.dart';
 import 'model.dart';
+import 'package:ecommerce_app/address.dart';
 
 class Details extends StatefulWidget {
   Model query = new Model(img: "", id: "");
@@ -76,7 +77,10 @@ class _DetailsState extends State<Details> {
               margin: EdgeInsets.fromLTRB(0, 0, 5, 0),
               width: 130,
               child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Address(query:widget.query)));
+                  },
                   style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.blue),
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
@@ -142,7 +146,7 @@ class _DetailsState extends State<Details> {
                           EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                       child: Row(
                         children: [
-                          // Text(widget.query.ratings , style: TextStyle(fontSize: 16),),
+                          Text(widget.query.ratings.toString() , style: TextStyle(fontSize: 16),),
                           Icon(
                             Icons.star_border_rounded,
                             size: 20,
