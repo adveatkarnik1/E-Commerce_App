@@ -38,6 +38,8 @@ dependencies:
   cloud_firestore: ^4.8.4
   provider: ^6.0.5
   cached_network_image: ^3.2.3
+  dropdown_search:
+  country_state_picker: ^0.0.5
 
 
   # The following adds the Cupertino Icons font to your application.
