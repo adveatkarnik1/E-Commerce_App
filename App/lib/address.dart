@@ -77,7 +77,15 @@ class _AddressState extends State<Address> {
                         subtitle:Text("${products[index].price}Rs" ,style: TextStyle(fontSize: 12,fontWeight: FontWeight.w400),),
                         leading: Image.network(products[index].img),
                         trailing: IconButton(
-                          icon: Icon(Icons.delete), onPressed: () {  },
+                          icon: Icon(Icons.delete), onPressed: () {
+                            setState(() {
+                              products.removeAt(index);
+                              if(products.length==0)
+                                {
+                                  Navigator.pop(context);
+                                }
+                            });
+                        },
                         ),
 
                       ) ),

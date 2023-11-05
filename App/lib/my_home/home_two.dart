@@ -10,6 +10,7 @@ import 'package:provider/provider.dart';
 import 'package:ecommerce_app/SearchPage.dart';
 
 import '../details.dart';
+import '../newpage.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -23,7 +24,7 @@ class _HomePageState extends State<HomePage> {
   final user = const AuthUser(true);
   final newUser = const AuthUser(false);
   GlobalKey<ScaffoldState> _drawerKey =GlobalKey();
-  List nav_items=["Electronics","Home","Beauty","Mobile","Appliances","Toys"];
+  List nav_items=["Furniture","Shirts","Jewellery","Combos","Cases & Covers","USB Gadgets"];
   @override
   Widget build(BuildContext context) {
     final recommender = Provider.of<SVDRecommendedProvider>(context);
@@ -104,7 +105,7 @@ class _HomePageState extends State<HomePage> {
                       return InkWell(
                         onTap: ()
                         {
-                          //Navigator.push(context,MaterialPageRoute(builder: (context)=>Category(query: nav_items[index])));
+                          Navigator.push(context,MaterialPageRoute(builder: (context)=>NewPage(query: nav_items[index])));
                         },
                         child: Container(
                           padding: EdgeInsets.symmetric(horizontal: 20,vertical: 10),
