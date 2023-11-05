@@ -34,6 +34,8 @@ class _DetailsState extends State<Details> {
   Widget build(BuildContext context) {
     // log("im a string");
     // log(widget.query.img);
+    final ReviewList=[];
+    //ReviewList.addAll(widget.query.reviews);
     String image1 = widget.query.img.replaceAll("[", "");
     String image2 = image1.replaceAll("]", "");
     String image3 = image2.replaceAll("\"", "");
@@ -173,8 +175,26 @@ class _DetailsState extends State<Details> {
               ),
               SizedBox(height: 5),
               Text(widget.query.des),
-              SizedBox(height: 5),
-              Text(widget.query.subcategory),
+              SizedBox(height: 5,),
+              Text("Overall Review rating",style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold,color: Colors.black.withOpacity(0.5)),),
+              SizedBox(height: 5,),
+              Text("Reviews",style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold,color: Colors.black.withOpacity(0.5)),),
+              SizedBox(height: 5,),
+              ListView.builder(
+                  shrinkWrap: true,
+                  scrollDirection: Axis.vertical,
+                  itemCount: ReviewList.length,
+                  itemBuilder:(context,index)=>ListTile(
+                    hoverColor: Colors.black54,
+                    contentPadding: EdgeInsets.fromLTRB(8, 2, 0, 2),
+                    title: Text("Anonymous"+ index.toString() ,style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold),),
+                    subtitle:Text(ReviewList[index].title.length>40 ?"${ReviewList[index].substring(0,50)}...":ReviewList[index],style: TextStyle(fontSize: 12),),
+                    leading: Image.asset("images/user_icon.jpg"),
+                    trailing: Text(/*widget.query.review_ratings*/""),
+                  ) ),
+
+
+
             ],
           ),
         ),
